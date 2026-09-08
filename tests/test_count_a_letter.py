@@ -1,19 +1,48 @@
+# Co-contributer: Valerie, Porselvi, Annie
+
 from main import count_a_letter
 import pytest
 
 def test_demo_one():
-    num_1 = 8
-    num_2 = 9
+    sentence = "We are a great team!"
+    letter = "a"
+    count = count_a_letter(sentence, letter)
 
-    result = num_1 + num_2
-
-    assert result == 17
+    assert count == 4
 
 def test_demo_two():
-    num_1 = 18
-    num_2 = 24
+    sentence = "We are a great team!"
+    letter = "x"
+    count = count_a_letter(sentence, letter)
 
-    result = num_1 + num_2
+    assert count == 0
 
-    assert result == 42
+def test_demo_three():
+    sentence = "We are a great team!"
+    letter = "10"
+    count = count_a_letter(sentence, letter)
+
+    assert count is None
+
+def test_demo_four():
+    sentence = "a"
+    letter = "We are family!"
+    count = count_a_letter(sentence, letter)
+
+    assert count is None
+
+def test_demo_five():
+    sentence = "We are a big family!"
+    letter = "**"
+    count = count_a_letter(sentence, letter)
+
+    assert count is None
+
+def test_demo_five():
+    sentence = "WE ARE A BIG FAMILY!"
+    letter = "a"
+    count = count_a_letter(sentence, letter)
+
+    assert count == 0
+
 # Delete the demo tests and add your tests here 
